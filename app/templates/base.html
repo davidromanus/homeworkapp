@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
+</head>
+<style type="text/css">
+	.file{
+		background-color:#ffffff90;
+		width:300px;
+		height:300px;
+		position: relative;
+		left:35%;
+		border-radius:5px;
+	}
+	.file:hover{
+		border:1px solid cornflowerblue;
+		transition-duration:2s;
+		transition-delay:0.5s;
+
+	}
+	.upload{
+		width:150px;
+		height: 100px;
+	}
+</style>
+<body>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes>
+{% for message in messages %}
+<li style="list-style-type:none;color:red;font-size:25px;"><small>{{ message }}</small></li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+{%block body%}{%endblock%}
+</body>
+</html>

@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{%block body%}
+<h3 style="color:blue;text-align: center;margin-top:10px;">Edit Student Data</h3>
+<div class="container">
+	<nav>
+		<a href="{{url_for('admin_dashboard')}}" class="btn btn-warning btn-md">Back</a>
+	</nav>
+	<div class="form">
+<div>
+	<form action="" method="post">
+		{{form.hidden_tag()}}
+		<p>
+			{{form.fname.label}}
+			{{form.fname(class="form-control")}}
+		</p>
+		<p>
+			{{form.lname.label}}
+			{{form.lname(class="form-control")}}
+		</p>
+		<p>
+			{{form.oname.label}}
+			{{form.oname(class="form-control")}}
+		</p>
+		<p>
+			{{form.matric_no.label}}
+			{{form.matric_no(class="form-control")}}
+		</p>
+		<p>
+			{{form.submit(class="btn btn-outline-primary btn-md")}}
+		</p>
+	</form>
+</div>
+	</div>
+</div>
+{%endblock%}

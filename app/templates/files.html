@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block body%}
+<div class="container">
+	<nav>
+		<a href="{{url_for('admin_dashboard')}}" class="btn btn-warning btn-md">Back</a>
+	</nav>
+	<h3 style="color:blue;text-align: center;">Download Uploade files here</h3>
+	<ul style="list-style-type: none;">
+		{%for f in files%}
+		{{f.id}}<li>{{f.name}}<span><a href="{{url_for('download',id=f.id)}}" class="btn btn-primary btn-xs">Download File</a></span></li><br>
+		{%endfor%}
+	</ul>
+</div>
+{%endblock%}

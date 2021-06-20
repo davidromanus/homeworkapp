@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block body%}
+<section class="jumbotron text-center">
+    <div class="container">
+      <h1 style="font-family:serif;color:orange;">Project Manager</h1>
+      <p class="lead text-muted">Click on choose file, choose a file and hit submit. It's that easy :)</p>
+      <!--p>
+        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </p-->
+    </div>
+  </section>
+<section class="file">
+	<div class="container">
+	<h3 style="font-family: sans-serif;color:orange;">Upload Files Here</h3>
+<form action="" method="post" enctype="multipart/form-data" class="md-form my-3">
+	<div class="file-field">
+		<div class="upload">
+                <input type="file" name=file>
+		</div>
+		<input type="submit" class="btn btn-secondary me-2" target="_blank"  role="submit">
+	</div>
+</form>
+</div>
+</section>
+<p class="mt-5 mb-3 text-muted" style="position: absolute;left:35%;">Panthers &copy; 2020-2021</p>
+{%endblock body%}
+<!---
+<p><input type="file" name="file" class="btn  btn-outline-primary btn-lg">
+		<input type="submit" value="Upload" class="btn btn-outline-primary btn-lg"></p>
+--->
